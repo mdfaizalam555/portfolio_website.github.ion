@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/070281d8c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav> 
+            <div class="detel">
+                <h1>I,m Md <span>Faiz Alam</span></h1>
+                <p>This is my official Portfolio website to showes all
+                    <br> Details and work exiprines web Development
+                </p>
+             
+                <a href="img/MY_CV.pdf" download class="detel a detel a">Download CV</a>
+               
+            </div> 
+            <div class="detel-sci">
+                <a href="https://www.facebook.com/profile.php?id=100051015675579"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/MdFaizA95955430"><i class="fa-brands fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/mdfaiz4242/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/md-faiz-alam-52906a226/"><i class="fa-brands fa-linkedin"></i></a>
+                
+            </div>
+        </div>
+    </div>
+    <!-- --------about-------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/faiz.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Md Faiz Alam, currently I'm pursuing Bachelor of Technology (B.Tech) in Computer Science and Engineering from Techno International New Town, Kolkata.</p>
+                
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>Javascript</span></li>
+                            <li><span>JAVA</span></li>
+                            <li><span>SQL</span></li>
+                            <li><span>Oops</span></li>
+                            <li><span>C</span></li>
+
+                        </ul>
+                    </div>   
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Web Development Internship at codesoft.</li>
+                            <li><span>Jul - Aug</span><br>React Js Internship at celebal Technologies.</li>
+                            <li><span>2022 - Oct</span><br>Hacktoberfest2022.</li>
+                            <li><span>2023 - May</span><br>I attended GCCD'23.</li>
+                        </ul>
+                    </div>   
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Current</span><br>B.Tech in Computer Science & Engineering.</li>
+                            <li><span>2018 - 2019</span><br>12th Science.</li>
+                            <li><span>2016 - 2017</span><br>10th Matriculation.</li>
+                        </ul>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+
+
+    <!-- --------services------- -->
+
+    <div class="service">
+        <div class="title">
+            <h2>My Service</h2>
+        </div>
+
+
+
+        <div class="box">
+            <div class="card">
+                <i class="fa-solid fa-bars"></i>
+                <h5>Web Developer</h5>
+                <div class="pra">
+                    <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
+
+                    <p style="text-align: center;">
+                        <a class="button"  href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+
+            
+            
+            
+                <div class="card">
+                    <i class="fa-regular fa-user"></i>
+                    <h5>Web Designer</h5>
+                    <div class="pra">
+                        <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
+
+                        <p style="text-align: center;">
+                            <a class="button"  href="#">Read More</a>
+                        </p>
+                    </div>
+                </div>
+
+        
+
+        
+            <div class="card">
+                <i class="fa-regular fa-bell"></i>
+                <h5>Frontend Developer</h5>
+                <div class="pra">
+                    <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
+                    <p style="text-align: center;">
+                        <a class="button"  href="#">Read More</a>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!---------Contact Me---------->
+    
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> md.faizalam9304@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 7485835310</p>
+                    <div class="social-icons">
+                           <a href="https://www.facebook.com/profile.php?id=100051015675579"><i class="fa-brands fa-facebook"></i></a>
+                           <a href="https://twitter.com/MdFaizA95955430"><i class="fa-brands fa-twitter-square"></i></a>
+                           <a href="https://www.instagram.com/mdfaiz4242/"><i class="fa-brands fa-instagram"></i></a>
+                           <a href="https://www.linkedin.com/in/md-faiz-alam-52906a226/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                
+                </div>
+                <div class="contact-right">
+                   <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <a href="#" class="btn">Submit</a>
+                    </form>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>Copyright By Md Faiz Alam</p>
+        </div>
+    </div>
+    
+</body>
+</html>
